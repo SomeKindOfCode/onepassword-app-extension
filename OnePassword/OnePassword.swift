@@ -20,10 +20,10 @@ public class OnePassword {
     public class func findLogin(urlString: String, viewController: UIViewController, sender: Any?, completion: OnePasswordLoginDictionaryCompletionBlock) {}
     public class func storeLogin(urlString: String, loginDetails loginDetailsDictionary: [String: String]?, passwordGenerationOptions: [String: String]?, viewController: UIViewController, sender: Any?, completion: OnePasswordLoginDictionaryCompletionBlock) {}
     public class func changePassword(urlString: String, loginDetails loginDetailsDictionary: [String: String]?, passwordGenerationOptions: [String: String]?, viewController: UIViewController, sender: Any?, completion: OnePasswordLoginDictionaryCompletionBlock) {}
-    public class func fillItemInto(webView: Any, for viewController: UIViewController, sender: Any?, showOnlyLogins: Bool, completion: OnePasswordSuccessCompletionBlock) {}
+    public class func fillItemInto(webView: WebViewCompatible, for viewController: UIViewController, sender: Any?, showOnlyLogins: Bool, completion: OnePasswordSuccessCompletionBlock) {}
     
     public class func isOnePasswordExtensionActivityType(_ activityType: String) -> Bool { return false }
     
-    public class func createExtension(for webView: Any, completion: OnePasswordExtensionItemCompletionBlock) {}
+    public class func createExtension(for webView: WebViewCompatible, completion: OnePasswordExtensionItemCompletionBlock) {}
     public class func fill(returnedItems: [String]?, into webView: Any, completion: OnePasswordSuccessCompletionBlock) {}
 }
