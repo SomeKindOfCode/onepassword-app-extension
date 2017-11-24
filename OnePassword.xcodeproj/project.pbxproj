@@ -11,6 +11,7 @@
 		9256FF921FC855D90007CC05 /* OnePasswordExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9256FF901FC855D90007CC05 /* OnePasswordExtension.m */; };
 		9256FF931FC855D90007CC05 /* OnePasswordExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 9256FF911FC855D90007CC05 /* OnePasswordExtension.h */; };
 		9256FF951FC8561A0007CC05 /* 1Password.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9256FF941FC8561A0007CC05 /* 1Password.xcassets */; };
+		9256FF971FC856C80007CC05 /* OnePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9256FF961FC856C80007CC05 /* OnePassword.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		9256FF901FC855D90007CC05 /* OnePasswordExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnePasswordExtension.m; sourceTree = SOURCE_ROOT; };
 		9256FF911FC855D90007CC05 /* OnePasswordExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnePasswordExtension.h; sourceTree = SOURCE_ROOT; };
 		9256FF941FC8561A0007CC05 /* 1Password.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = 1Password.xcassets; sourceTree = "<group>"; };
+		9256FF961FC856C80007CC05 /* OnePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePassword.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				9256FF8F1FC855CF0007CC05 /* ObjC */,
 				9256FF871FC8559C0007CC05 /* OnePassword.h */,
 				9256FF881FC8559C0007CC05 /* Info.plist */,
+				9256FF961FC856C80007CC05 /* OnePassword.swift */,
 			);
 			path = OnePassword;
 			sourceTree = "<group>";
@@ -113,6 +116,7 @@
 				TargetAttributes = {
 					9256FF831FC8559C0007CC05 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -151,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9256FF921FC855D90007CC05 /* OnePasswordExtension.m in Sources */,
+				9256FF971FC856C80007CC05 /* OnePassword.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +278,7 @@
 		9256FF8D1FC8559C0007CC05 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -286,6 +292,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.somekindofcode.OnePassword;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -294,6 +301,7 @@
 		9256FF8E1FC8559C0007CC05 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
