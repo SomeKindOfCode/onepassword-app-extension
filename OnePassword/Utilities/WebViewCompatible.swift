@@ -20,7 +20,6 @@ extension UIWebView: WebViewCompatible {
     }
 }
 
-@available(iOS 8.0, *)
 extension WKWebView: WebViewCompatible {
     public func eval(javaScript: String, completion: @escaping (String?, Error?) -> ()) {
         self.evaluateJavaScript(javaScript) { (response, error) in

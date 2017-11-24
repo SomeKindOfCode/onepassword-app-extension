@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9256FF891FC8559C0007CC05 /* OnePassword.h in Headers */ = {isa = PBXBuildFile; fileRef = 9256FF871FC8559C0007CC05 /* OnePassword.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9256FF921FC855D90007CC05 /* OnePasswordExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 9256FF901FC855D90007CC05 /* OnePasswordExtension.m */; };
-		9256FF931FC855D90007CC05 /* OnePasswordExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 9256FF911FC855D90007CC05 /* OnePasswordExtension.h */; };
-		9256FF951FC8561A0007CC05 /* 1Password.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9256FF941FC8561A0007CC05 /* 1Password.xcassets */; };
 		9256FF971FC856C80007CC05 /* OnePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9256FF961FC856C80007CC05 /* OnePassword.swift */; };
 		9256FF9A1FC874820007CC05 /* WebViewCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9256FF991FC874820007CC05 /* WebViewCompatible.swift */; };
 		9256FFA21FC8BC0A0007CC05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9256FFA11FC8BC0A0007CC05 /* AppDelegate.swift */; };
@@ -19,6 +16,7 @@
 		9256FFA91FC8BC0B0007CC05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9256FFA81FC8BC0B0007CC05 /* Assets.xcassets */; };
 		9256FFAC1FC8BC0B0007CC05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9256FFAA1FC8BC0B0007CC05 /* LaunchScreen.storyboard */; };
 		9256FFB21FC8C4060007CC05 /* OnePassword.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9256FF841FC8559C0007CC05 /* OnePassword.framework */; };
+		9256FFB51FC8D4680007CC05 /* 1Password.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9256FF941FC8561A0007CC05 /* 1Password.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,7 +142,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9256FF931FC855D90007CC05 /* OnePasswordExtension.h in Headers */,
 				9256FF891FC8559C0007CC05 /* OnePassword.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,7 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9256FF951FC8561A0007CC05 /* 1Password.xcassets in Resources */,
+				9256FFB51FC8D4680007CC05 /* 1Password.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,7 +251,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9256FF921FC855D90007CC05 /* OnePasswordExtension.m in Sources */,
 				9256FF971FC856C80007CC05 /* OnePassword.swift in Sources */,
 				9256FF9A1FC874820007CC05 /* WebViewCompatible.swift in Sources */,
 			);
@@ -425,7 +421,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = OnePassword/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.somekindofcode.OnePassword;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -449,7 +445,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = OnePassword/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.somekindofcode.OnePassword;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
