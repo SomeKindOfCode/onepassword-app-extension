@@ -17,6 +17,8 @@
 		9256FFAC1FC8BC0B0007CC05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9256FFAA1FC8BC0B0007CC05 /* LaunchScreen.storyboard */; };
 		9256FFB21FC8C4060007CC05 /* OnePassword.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9256FF841FC8559C0007CC05 /* OnePassword.framework */; };
 		9256FFB51FC8D4680007CC05 /* 1Password.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9256FF941FC8561A0007CC05 /* 1Password.xcassets */; };
+		9256FFB71FC8D6DA0007CC05 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9256FFB61FC8D6DA0007CC05 /* Constants.swift */; };
+		9256FFB91FC8E4740007CC05 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9256FFB81FC8E4740007CC05 /* Error.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		9256FFA81FC8BC0B0007CC05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9256FFAB1FC8BC0B0007CC05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9256FFAD1FC8BC0B0007CC05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9256FFB61FC8D6DA0007CC05 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9256FFB81FC8E4740007CC05 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				9256FF991FC874820007CC05 /* WebViewCompatible.swift */,
+				9256FFB61FC8D6DA0007CC05 /* Constants.swift */,
+				9256FFB81FC8E4740007CC05 /* Error.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -251,8 +257,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9256FFB91FC8E4740007CC05 /* Error.swift in Sources */,
 				9256FF971FC856C80007CC05 /* OnePassword.swift in Sources */,
 				9256FF9A1FC874820007CC05 /* WebViewCompatible.swift in Sources */,
+				9256FFB71FC8D6DA0007CC05 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
