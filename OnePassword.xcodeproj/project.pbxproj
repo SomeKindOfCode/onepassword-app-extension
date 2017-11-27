@@ -20,6 +20,7 @@
 		9256FFB91FC8E4740007CC05 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9256FFB81FC8E4740007CC05 /* Error.swift */; };
 		9256FFBB1FCC4AA70007CC05 /* OnePassword.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9256FF841FC8559C0007CC05 /* OnePassword.framework */; };
 		9256FFBC1FCC4AA70007CC05 /* OnePassword.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9256FF841FC8559C0007CC05 /* OnePassword.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9256FFBF1FCC6A280007CC05 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9256FFBE1FCC6A280007CC05 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		9256FFAD1FC8BC0B0007CC05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9256FFB61FC8D6DA0007CC05 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9256FFB81FC8E4740007CC05 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		9256FFBE1FCC6A280007CC05 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				9256FF991FC874820007CC05 /* WebViewCompatible.swift */,
 				9256FFB61FC8D6DA0007CC05 /* Constants.swift */,
 				9256FFB81FC8E4740007CC05 /* Error.swift */,
+				9256FFBE1FCC6A280007CC05 /* Extensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9256FFBF1FCC6A280007CC05 /* Extensions.swift in Sources */,
 				9256FFB91FC8E4740007CC05 /* Error.swift in Sources */,
 				9256FF971FC856C80007CC05 /* OnePassword.swift in Sources */,
 				9256FF9A1FC874820007CC05 /* WebViewCompatible.swift in Sources */,

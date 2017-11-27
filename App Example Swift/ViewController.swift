@@ -31,8 +31,8 @@ class ViewController: UIViewController {
     @IBAction func onePassButtonTapped(_ sender: Any) {
         OnePasswordExtention.findLogin(urlString: "https://www.acme.com", viewController: self, sender: sender) { (loginDictionary, error) in
             
-            self.usernameTextField.text = loginDictionary?[OnePassword.Constants.Keys.username]
-            self.passwordTextField.text = loginDictionary?[OnePassword.Constants.Keys.password]
+            self.usernameTextField.text = loginDictionary?[onepass: .username]
+            self.passwordTextField.text = loginDictionary?[onepass: .password]
         }
     }
 }

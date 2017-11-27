@@ -31,8 +31,8 @@ public class OnePasswordExtention {
         
         // Create Activity Item
         var item = [String: Any]()
-        item[Constants.Keys.versionNumber] = Constants.versionNumber
-        item[Constants.Keys.urlString] = urlString
+        item[onepass: .versionNumber] = Constants.versionNumber
+        item[onepass: .urlString] = urlString
         
         let activityController = self.activityViewController(for: item, viewController: viewController, sender: sender, typeIdentifier: .findLogin)
         
