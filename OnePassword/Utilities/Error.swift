@@ -10,11 +10,11 @@ import Foundation
 
 enum OnePasswordError: Error {
     case cancelledByUser
-    case APINotAvailable
-    case FailedToContactExtension
-    case FailedToLoadItemProviderData
-    case CollectFieldsScriptFailed
-    case FillFieldsScriptFailed
+    case apiNotAvailable
+    case failedToContactExtension
+    case failedToLoadItemProviderData
+    case collectFieldsScriptFailed
+    case fillFieldsScriptFailed
     case unexpectedData
     case failedToObtainURLStringFromWebView
 }
