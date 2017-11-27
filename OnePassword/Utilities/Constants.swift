@@ -9,12 +9,12 @@
 import Foundation
 
 public class Constants {
-    class ExtensionActions {
-        static let findLogin: String = "org.appextension.find-login-action"
-        static let saveLogin: String = "org.appextension.save-login-action"
-        static let changePassword: String = "org.appextension.change-password-action"
-        static let fillWebView: String = "org.appextension.fill-webview-action"
-        static let fillBrowser: String = "org.appextension.fill-browser-action"
+    enum ExtensionActions: String {
+        case findLogin = "org.appextension.find-login-action"
+        case saveLogin = "org.appextension.save-login-action"
+        case changePassword = "org.appextension.change-password-action"
+        case fillWebView = "org.appextension.fill-webview-action"
+        case fillBrowser = "org.appextension.fill-browser-action"
     }
     
     class WebViewDictionaryKeys {

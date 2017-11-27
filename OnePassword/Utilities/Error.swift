@@ -15,6 +15,6 @@ enum OnePasswordError: Error {
     case failedToLoadItemProviderData
     case collectFieldsScriptFailed
     case fillFieldsScriptFailed
-    case unexpectedData
+    case unexpectedData(String)
     case failedToObtainURLStringFromWebView
 }
