@@ -16,7 +16,7 @@ public typealias OnePasswordLoginDictionaryCompletionBlock = (_ loginDictionary:
 public typealias OnePasswordSuccessCompletionBlock = (_ success: Bool, _ error: Error?) -> ()
 public typealias OnePasswordExtensionItemCompletionBlock = (_ extensionItem: NSExtensionItem?, _ error: Error?) -> ()
 
-public class OnePassword {    
+public class OnePasswordExtention {    
     public static var isAppExtentionAvailable: Bool { 
         return UIApplication.shared.canOpenURL(URL(string: "org-appextension-feature-password-management://")!)
     }
@@ -37,7 +37,7 @@ public class OnePassword {
         let activityController = self.activityViewController(for: item, viewController: viewController, sender: sender, typeIdentifier: .findLogin)
         
         activityController.completionWithItemsHandler = { (activity, isCompleted, items, error) in
-            guard error != nil else {
+            guard error == nil else {
                 completion(nil, error)
                 return
             }
@@ -67,7 +67,7 @@ public class OnePassword {
 
 // MARK: Internals
 
-extension OnePassword {
+extension OnePasswordExtention {
     class func activityViewController(for item: [String: Any], viewController: UIViewController, sender: Any?, typeIdentifier: Constants.ExtensionActions) -> UIActivityViewController {
         if UIDevice.current.userInterfaceIdiom == .pad && sender == nil {
             debugLog("sender must not be nil on iPad")

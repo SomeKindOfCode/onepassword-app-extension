@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,11 +22,58 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8wI-4l-Afb">
+                                <rect key="frame" x="63" y="120" width="250" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="7qN-sD-5Ow"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="username"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="05N-gL-dvw">
+                                <rect key="frame" x="63" y="170" width="250" height="35"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ls5-tK-fO8">
+                                <rect key="frame" x="321" y="120" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ls5-tK-fO8" secondAttribute="height" multiplier="1:1" id="67L-OH-eBS"/>
+                                    <constraint firstAttribute="width" constant="35" id="ROm-gI-cqj"/>
+                                </constraints>
+                                <state key="normal" image="onepassword-button"/>
+                                <connections>
+                                    <action selector="onePassButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iRT-Qn-y3v"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="05N-gL-dvw" firstAttribute="centerX" secondItem="8wI-4l-Afb" secondAttribute="centerX" id="3Ha-pE-Rsg"/>
+                            <constraint firstItem="Ls5-tK-fO8" firstAttribute="centerY" secondItem="8wI-4l-Afb" secondAttribute="centerY" id="A6h-hj-87d"/>
+                            <constraint firstItem="05N-gL-dvw" firstAttribute="height" secondItem="8wI-4l-Afb" secondAttribute="height" id="De2-xl-9Br"/>
+                            <constraint firstItem="8wI-4l-Afb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ztv-Df-rac"/>
+                            <constraint firstItem="8wI-4l-Afb" firstAttribute="top" secondItem="8ks-tg-skn" secondAttribute="bottom" constant="100" id="oul-QV-3LP"/>
+                            <constraint firstItem="8wI-4l-Afb" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="2:3" id="sbj-WF-wL3"/>
+                            <constraint firstItem="05N-gL-dvw" firstAttribute="top" secondItem="8wI-4l-Afb" secondAttribute="bottom" constant="15" id="xBV-Av-96U"/>
+                            <constraint firstItem="05N-gL-dvw" firstAttribute="width" secondItem="8wI-4l-Afb" secondAttribute="width" id="ybg-nV-PTk"/>
+                            <constraint firstItem="Ls5-tK-fO8" firstAttribute="leading" secondItem="8wI-4l-Afb" secondAttribute="trailing" constant="8" id="zQx-oX-pvS"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="onePassButton" destination="Ls5-tK-fO8" id="mOp-lM-tmb"/>
+                        <outlet property="passwordTextField" destination="05N-gL-dvw" id="4TR-FO-2AP"/>
+                        <outlet property="usernameTextField" destination="8wI-4l-Afb" id="L2D-Wx-e9t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="onepassword-button" width="27" height="27"/>
+    </resources>
 </document>

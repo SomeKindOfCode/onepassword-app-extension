@@ -15,10 +15,11 @@
 		9256FFA71FC8BC0A0007CC05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9256FFA51FC8BC0A0007CC05 /* Main.storyboard */; };
 		9256FFA91FC8BC0B0007CC05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9256FFA81FC8BC0B0007CC05 /* Assets.xcassets */; };
 		9256FFAC1FC8BC0B0007CC05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9256FFAA1FC8BC0B0007CC05 /* LaunchScreen.storyboard */; };
-		9256FFB21FC8C4060007CC05 /* OnePassword.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9256FF841FC8559C0007CC05 /* OnePassword.framework */; };
 		9256FFB51FC8D4680007CC05 /* 1Password.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9256FF941FC8561A0007CC05 /* 1Password.xcassets */; };
 		9256FFB71FC8D6DA0007CC05 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9256FFB61FC8D6DA0007CC05 /* Constants.swift */; };
 		9256FFB91FC8E4740007CC05 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9256FFB81FC8E4740007CC05 /* Error.swift */; };
+		9256FFBB1FCC4AA70007CC05 /* OnePassword.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9256FF841FC8559C0007CC05 /* OnePassword.framework */; };
+		9256FFBC1FCC4AA70007CC05 /* OnePassword.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9256FF841FC8559C0007CC05 /* OnePassword.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +31,20 @@
 			remoteInfo = OnePassword;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9256FFBD1FCC4AA70007CC05 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9256FFBC1FCC4AA70007CC05 /* OnePassword.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9256FF841FC8559C0007CC05 /* OnePassword.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OnePassword.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9256FFB21FC8C4060007CC05 /* OnePassword.framework in Frameworks */,
+				9256FFBB1FCC4AA70007CC05 /* OnePassword.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +195,7 @@
 				9256FF9B1FC8BC0A0007CC05 /* Sources */,
 				9256FF9C1FC8BC0A0007CC05 /* Frameworks */,
 				9256FF9D1FC8BC0A0007CC05 /* Resources */,
+				9256FFBD1FCC4AA70007CC05 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -466,6 +482,7 @@
 		9256FFAF1FC8BC0B0007CC05 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CXT48Q4DDA;
@@ -482,6 +499,7 @@
 		9256FFB01FC8BC0B0007CC05 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CXT48Q4DDA;
