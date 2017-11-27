@@ -118,7 +118,9 @@ extension OnePasswordExtention {
                 return
             }
             
-            completion(itemDictionary, nil)
+            DispatchQueue.main.async {
+                completion(itemDictionary, nil)
+            }
         }
     }
 }
