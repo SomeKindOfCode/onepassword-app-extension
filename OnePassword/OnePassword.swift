@@ -17,11 +17,18 @@ public typealias OnePasswordSuccessCompletionBlock = (_ success: Bool, _ error: 
 public typealias OnePasswordExtensionItemCompletionBlock = (_ extensionItem: NSExtensionItem?, _ error: Error?) -> ()
 
 public class OnePasswordExtention {    
+    /// *true* if any app that supports the generic `org-appextension-feature-password-management` feature is installed on the device.
     public static var isAppExtentionAvailable: Bool { 
         return UIApplication.shared.canOpenURL(URL(string: "org-appextension-feature-password-management://")!)
     }
     
-    /// 
+    /// Called from your login page, this method will find all available logins for the given URLString.
+    ///
+    /// - Parameters:
+    ///     - urlString: For the matching Logins in the password vault
+    ///     - viewController: The view controller from which the password Extension is invoked. Usually `self`
+    ///     - sender: The sender which triggers the share sheet to show. UIButton, UIBarButtonItem or UIView. Can also be nil on iPhone, but not on iPad.
+    ///     - completion: A completion block called with two parameters loginDictionary and error once completed. The loginDictionary reply parameter that contains the username, password and the One-Time Password if available. The error Reply parameter that is nil if the 1Password Extension has been successfully completed, or it contains error information about the completion failure.
     public class func findLogin(urlString: String, viewController: UIViewController, sender: Any?, completion: @escaping OnePasswordLoginDictionaryCompletionBlock) {
         guard self.isAppExtentionAvailable else {
             // ???: Maybe throw errors?
@@ -56,6 +63,7 @@ public class OnePasswordExtention {
     }
     
     public class func storeLogin(urlString: String, loginDetails loginDetailsDictionary: [String: String]?, passwordGenerationOptions: [String: String]?, viewController: UIViewController, sender: Any?, completion: OnePasswordLoginDictionaryCompletionBlock) {}
+    
     public class func changePassword(urlString: String, loginDetails loginDetailsDictionary: [String: String]?, passwordGenerationOptions: [String: String]?, viewController: UIViewController, sender: Any?, completion: OnePasswordLoginDictionaryCompletionBlock) {}
     public class func fillItemInto(webView: WebViewCompatible, for viewController: UIViewController, sender: Any?, showOnlyLogins: Bool, completion: OnePasswordSuccessCompletionBlock) {}
     
