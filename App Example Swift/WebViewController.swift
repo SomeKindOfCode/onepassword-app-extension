@@ -18,6 +18,8 @@ class WebViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        onePassFillButton.image = UIImage(named: "onepassword-navbar", in: Bundle(for: OnePasswordExtention.self), compatibleWith: nil)
+        
         self.webView.navigationDelegate = self
         
         self.onePassFillButton.isEnabled = OnePasswordExtention.isAppExtentionAvailable
