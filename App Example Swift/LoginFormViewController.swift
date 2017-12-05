@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginFormViewController.swift
 //  App Example Swift
 //
 //  Created by Christopher Beloch on 24.11.17.
@@ -9,7 +9,7 @@
 import UIKit
 import OnePassword
 
-class ViewController: UIViewController {
+class LoginFormViewController: UIViewController {
 
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!

@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gcS-C6-36Z">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Form-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="App_Example_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginFormViewController" customModule="App_Example_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8ks-tg-skn"/>
                         <viewControllerLayoutGuide type="bottom" id="u3W-AC-Ggm"/>
@@ -63,6 +62,7 @@
                             <constraint firstItem="Ls5-tK-fO8" firstAttribute="leading" secondItem="8wI-4l-Afb" secondAttribute="trailing" constant="8" id="zQx-oX-pvS"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Form" id="aEc-2f-qQg"/>
                     <connections>
                         <outlet property="onePassButton" destination="Ls5-tK-fO8" id="mOp-lM-tmb"/>
                         <outlet property="passwordTextField" destination="05N-gL-dvw" id="4TR-FO-2AP"/>
@@ -71,9 +71,119 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="524" y="-122"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="Cah-DE-OBu">
+            <objects>
+                <viewController id="ewY-61-Kz1" customClass="WebViewController" customModule="App_Example_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xza-vt-x8w"/>
+                        <viewControllerLayoutGuide type="bottom" id="P3y-Nu-UsP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EKL-mE-jff">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="acme.org" translatesAutoresizingMaskIntoConstraints="NO" id="rfx-Bb-skM">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits" textContentType="url"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ewY-61-Kz1" id="mWV-0c-6h2"/>
+                                </connections>
+                            </searchBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cq8-VD-tEg">
+                                <rect key="frame" x="0.0" y="574" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="reply" id="FbK-UR-mpF">
+                                        <connections>
+                                            <action selector="onBackButtonTap:" destination="ewY-61-Kz1" id="fEM-ug-TiM"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Pas-DR-nlN"/>
+                                </items>
+                            </toolbar>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rwj-ZK-Ikb">
+                                <rect key="frame" x="0.0" y="120" width="375" height="454"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cq8-VD-tEg" firstAttribute="leading" secondItem="EKL-mE-jff" secondAttribute="leading" id="25W-WS-jqC"/>
+                            <constraint firstItem="Rwj-ZK-Ikb" firstAttribute="top" secondItem="rfx-Bb-skM" secondAttribute="bottom" id="9z2-TC-uYD"/>
+                            <constraint firstItem="Rwj-ZK-Ikb" firstAttribute="leading" secondItem="EKL-mE-jff" secondAttribute="leading" id="JFG-jD-38Y"/>
+                            <constraint firstItem="rfx-Bb-skM" firstAttribute="top" secondItem="xza-vt-x8w" secondAttribute="bottom" id="JcQ-Te-nbh"/>
+                            <constraint firstItem="P3y-Nu-UsP" firstAttribute="top" secondItem="cq8-VD-tEg" secondAttribute="bottom" id="LIf-1z-dOg"/>
+                            <constraint firstAttribute="trailing" secondItem="Rwj-ZK-Ikb" secondAttribute="trailing" id="QsQ-1d-LUN"/>
+                            <constraint firstItem="cq8-VD-tEg" firstAttribute="top" secondItem="Rwj-ZK-Ikb" secondAttribute="bottom" id="oce-ov-KSx"/>
+                            <constraint firstAttribute="trailing" secondItem="cq8-VD-tEg" secondAttribute="trailing" id="t0n-zF-X0b"/>
+                            <constraint firstItem="rfx-Bb-skM" firstAttribute="leading" secondItem="EKL-mE-jff" secondAttribute="leading" id="x80-fe-J4M"/>
+                            <constraint firstAttribute="trailing" secondItem="rfx-Bb-skM" secondAttribute="trailing" id="yqN-wZ-NXj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZbD-T4-yzG">
+                        <barButtonItem key="rightBarButtonItem" image="onepassword-navbar" id="hB3-m8-Ibu">
+                            <connections>
+                                <action selector="on1PassButtonTap:" destination="ewY-61-Kz1" id="8iq-q2-pim"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="onePassFillButton" destination="hB3-m8-Ibu" id="fnr-9a-2gN"/>
+                        <outlet property="searchBar" destination="rfx-Bb-skM" id="xtz-2u-50l"/>
+                        <outlet property="webView" destination="Rwj-ZK-Ikb" id="ijr-SC-H97"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6JT-VQ-dff" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1254" y="547"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="5F2-2c-ZnM">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="gcS-C6-36Z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ecs-gx-L4m">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="0gB-kd-lHI"/>
+                        <segue destination="qEw-SH-6gY" kind="relationship" relationship="viewControllers" id="gOw-ro-Q7S"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lxi-PQ-xRT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-385" y="93"/>
+        </scene>
+        <!--WebView-->
+        <scene sceneID="dgv-Na-SP9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qEw-SH-6gY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="WebView" id="vwu-35-vg1"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="y6A-c4-qhX">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ewY-61-Kz1" kind="relationship" relationship="rootViewController" id="dXp-U5-svO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4dI-qG-xpj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="523.20000000000005" y="547.82608695652175"/>
         </scene>
     </scenes>
     <resources>
         <image name="onepassword-button" width="27" height="27"/>
+        <image name="onepassword-navbar" width="23" height="23"/>
     </resources>
 </document>
