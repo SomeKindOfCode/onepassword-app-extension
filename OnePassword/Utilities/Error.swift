@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum OnePasswordError: Error {
+public enum OnePasswordError: Error {
     case cancelledByUser
     case apiNotAvailable
     case failedToContactExtension
