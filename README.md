@@ -118,5 +118,5 @@ If you open up OnePasswordExtension.m and start poking around, you'll be interes
 
 
 
-[^1 ]: The extension made UIWebView and WKWebView conform to this protocol to save some lines of code
+[^1 ]: The extension made UIWebView and WKWebView conform to this protocol to save some lines of code  
 [^2 ]: Are there any Chrome-/FireFox-/Edge-WebViews?
