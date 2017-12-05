@@ -38,7 +38,7 @@ Swift Version: 4.0
 
 Implementations:
 
-- [x] [Find Login](#fill-login) *(e.g. to fill In-App Form)*
+- [x] [Find Login](#find-login) *(e.g. to fill In-App Form)*
 - [x] [Fill Form inside WebView](#fill-webview) *(UIWebView and WKWebView supported)*
 - [ ] Store Login
 - [ ] Change Password
