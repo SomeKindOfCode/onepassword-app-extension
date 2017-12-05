@@ -85,7 +85,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="acme.org" translatesAutoresizingMaskIntoConstraints="NO" id="rfx-Bb-skM">
+                            <searchBar contentMode="redraw" placeholder="Enter domain" translatesAutoresizingMaskIntoConstraints="NO" id="rfx-Bb-skM">
                                 <rect key="frame" x="0.0" y="64" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits" textContentType="url"/>
                                 <connections>
@@ -93,7 +93,10 @@
                                 </connections>
                             </searchBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cq8-VD-tEg">
-                                <rect key="frame" x="0.0" y="574" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="573" width="375" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="05H-qw-pgm"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem systemItem="reply" id="FbK-UR-mpF">
                                         <connections>
@@ -104,7 +107,7 @@
                                 </items>
                             </toolbar>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rwj-ZK-Ikb">
-                                <rect key="frame" x="0.0" y="120" width="375" height="454"/>
+                                <rect key="frame" x="0.0" y="120" width="375" height="453"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>

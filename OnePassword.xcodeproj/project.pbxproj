@@ -22,7 +22,6 @@
 		9256FFBC1FCC4AA70007CC05 /* OnePassword.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9256FF841FC8559C0007CC05 /* OnePassword.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9256FFBF1FCC6A280007CC05 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9256FFBE1FCC6A280007CC05 /* Extensions.swift */; };
 		92D0D0581FD58CE2007F63D5 /* Scripts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D0D0571FD58CE2007F63D5 /* Scripts.swift */; };
-		92D0D05A1FD5A69E007F63D5 /* welcome.html in Resources */ = {isa = PBXBuildFile; fileRef = 92D0D0591FD5A69E007F63D5 /* welcome.html */; };
 		92D0D05C1FD5A766007F63D5 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D0D05B1FD5A766007F63D5 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,7 +69,6 @@
 		9256FFB81FC8E4740007CC05 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		9256FFBE1FCC6A280007CC05 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		92D0D0571FD58CE2007F63D5 /* Scripts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scripts.swift; sourceTree = "<group>"; };
-		92D0D0591FD5A69E007F63D5 /* welcome.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = welcome.html; sourceTree = "<group>"; };
 		92D0D05B1FD5A766007F63D5 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,7 +153,6 @@
 				9256FFA81FC8BC0B0007CC05 /* Assets.xcassets */,
 				9256FFAA1FC8BC0B0007CC05 /* LaunchScreen.storyboard */,
 				9256FFAD1FC8BC0B0007CC05 /* Info.plist */,
-				92D0D0591FD5A69E007F63D5 /* welcome.html */,
 				92D0D05B1FD5A766007F63D5 /* WebViewController.swift */,
 			);
 			path = "App Example Swift";
@@ -275,7 +272,6 @@
 				9256FFAC1FC8BC0B0007CC05 /* LaunchScreen.storyboard in Resources */,
 				9256FFA91FC8BC0B0007CC05 /* Assets.xcassets in Resources */,
 				9256FFA71FC8BC0A0007CC05 /* Main.storyboard in Resources */,
-				92D0D05A1FD5A69E007F63D5 /* welcome.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
