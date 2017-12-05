@@ -68,6 +68,7 @@
 		9256FFB61FC8D6DA0007CC05 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9256FFB81FC8E4740007CC05 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		9256FFBE1FCC6A280007CC05 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		9257D85D1FD6CD1000D3AE6D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		92D0D0571FD58CE2007F63D5 /* Scripts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scripts.swift; sourceTree = "<group>"; };
 		92D0D05B1FD5A766007F63D5 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +95,7 @@
 		9256FF7A1FC8559C0007CC05 = {
 			isa = PBXGroup;
 			children = (
+				9257D85D1FD6CD1000D3AE6D /* README.md */,
 				9256FF861FC8559C0007CC05 /* OnePassword */,
 				9256FFA01FC8BC0A0007CC05 /* App Example Swift */,
 				9256FF851FC8559C0007CC05 /* Products */,
