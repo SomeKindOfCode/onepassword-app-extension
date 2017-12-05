@@ -9,9 +9,6 @@
 import Foundation
 import MobileCoreServices
 
-
-// TODO: Everything
-
 public typealias OnePasswordLoginDictionaryCompletionBlock = (_ loginDictionary: [String:String]?, _ error: Error?) -> ()
 public typealias OnePasswordSuccessCompletionBlock = (_ success: Bool, _ error: Error?) -> ()
 public typealias OnePasswordExtensionItemCompletionBlock = (_ extensionItem: NSExtensionItem?, _ error: Error?) -> ()
@@ -62,14 +59,78 @@ public class OnePasswordExtention {
         }
     }
     
+    // TODO: !!!
     public class func storeLogin(urlString: String, loginDetails loginDetailsDictionary: [String: String]?, passwordGenerationOptions: [String: String]?, viewController: UIViewController, sender: Any?, completion: OnePasswordLoginDictionaryCompletionBlock) {}
     
+    // TODO: !!!
     public class func changePassword(urlString: String, loginDetails loginDetailsDictionary: [String: String]?, passwordGenerationOptions: [String: String]?, viewController: UIViewController, sender: Any?, completion: OnePasswordLoginDictionaryCompletionBlock) {}
-    public class func fillItemInto(webView: WebViewCompatible, for viewController: UIViewController, sender: Any?, showOnlyLogins: Bool, completion: OnePasswordSuccessCompletionBlock) {}
     
+    public class func fillItemInto(webView: WebViewCompatible, for viewController: UIViewController, sender: Any?, showOnlyLogins: Bool, completion: @escaping OnePasswordSuccessCompletionBlock) {
+        guard let url = webView.url else {
+            completion(false, OnePasswordError.failedToObtainURLStringFromWebView)
+            return
+        }
+        
+        // Collect fields
+        webView.eval(javaScript: Scripts.collectFieldsScript) { (result, error) in
+            guard let collectedPageDetails = result else {
+                completion(false, OnePasswordError.collectFieldsScriptFailed)
+                return
+            }
+            
+            let urlString = url.absoluteString
+            
+            let data = collectedPageDetails.data(using: .utf8)!
+            do {
+                let collectionPageDetailsDictionary = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+                
+                var item: [String: Any] = [:]
+                item[onepass: .versionNumber] = Constants.versionNumber
+                item[onepass: .urlString] = urlString
+                item[onepasswv: .pageDetails] = collectionPageDetailsDictionary
+                
+                let typeIdentifier: Constants.ExtensionActions = showOnlyLogins ? .fillWebView : .fillBrowser
+                
+                let activityController = self.activityViewController(for: item, viewController: viewController, sender: sender, typeIdentifier: typeIdentifier)
+                activityController.completionWithItemsHandler = { (activity, isCompleted, items, error) in
+                    guard 
+                        let returnedItems = items, 
+                        returnedItems.count > 0 
+                    else {
+                        completion(false, error ?? OnePasswordError.cancelledByUser)
+                        return
+                    }
+                    
+                    self.process(extensionItem: returnedItems.first as? NSExtensionItem, completion: { (itemDictionary, error) in
+                        guard 
+                            let dict = itemDictionary,
+                            dict.count > 0
+                        else {
+                            completion(false, error)
+                            return
+                        }
+                        
+                        let fillScript = dict[onepasswv: .fillScript]
+                        self.execute(fillScript: fillScript, in: webView, completion: completion)
+                    })
+                }
+                
+                // Display Activity View Controller
+                DispatchQueue.main.async {
+                    viewController.present(activityController, animated: true, completion: nil)
+                }
+            } catch {
+                // Some other errors occured white JSON serialization
+                completion(false, error)
+            }
+        }
+    }
+    
+    // TODO: !!!
     public class func isOnePasswordExtensionActivityType(_ activityType: String) -> Bool { return false }
-    
+    // TODO: !!!
     public class func createExtension(for webView: WebViewCompatible, completion: OnePasswordExtensionItemCompletionBlock) {}
+    // TODO: !!!
     public class func fill(returnedItems: [String]?, into webView: Any, completion: OnePasswordSuccessCompletionBlock) {}
 }
 
@@ -129,6 +190,23 @@ extension OnePasswordExtention {
             DispatchQueue.main.async {
                 completion(itemDictionary, nil)
             }
+        }
+    }
+    
+    class func execute(fillScript: String?, in webView: WebViewCompatible, completion: @escaping OnePasswordSuccessCompletionBlock) {
+        guard let script = fillScript else { 
+            completion(false, OnePasswordError.fillFieldsScriptFailed)
+            return
+        }
+        
+        let scriptSource = Scripts.fillScript.appendingFormat("(document, %@, undefined);", script)
+        webView.eval(javaScript: scriptSource) { (result, error) in
+            guard result != nil, error == nil else {
+                completion(false, error)
+                return
+            }
+            
+            completion(true, error)
         }
     }
 }

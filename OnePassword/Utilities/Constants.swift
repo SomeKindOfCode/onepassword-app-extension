@@ -36,6 +36,11 @@ public class Constants {
         case passwordGeneratorOptions = "password_generator_options"
         
         case versionNumber = "version_number"
+        
+        enum WebView: String {
+            case pageDetails
+            case fillScript
+        }
     }
     
     static let versionNumber: Int = 184

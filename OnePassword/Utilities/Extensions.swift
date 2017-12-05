@@ -17,4 +17,13 @@ public extension Dictionary where Key == String {
             self[onepass.rawValue] = newValue
         }
     }
+    
+    internal subscript (onepasswv key: Constants.Keys.WebView) -> Value? {
+        get {
+            return self[key.rawValue]
+        }
+        set {
+            self[key.rawValue] = newValue
+        }
+    }
 }
