@@ -72,7 +72,7 @@ public class OnePasswordExtention {
         }
         
         // Collect fields
-        webView.eval(javaScript: Scripts.collectFieldsScript) { (result, error) in
+        webView.eval(javaScript: Scripts.collectFields) { (result, error) in
             guard let collectedPageDetails = result else {
                 completion(false, OnePasswordError.collectFieldsScriptFailed)
                 return
@@ -199,7 +199,7 @@ extension OnePasswordExtention {
             return
         }
         
-        let scriptSource = Scripts.fillScript.appendingFormat("(document, %@, undefined);", script)
+        let scriptSource = Scripts.fill.appendingFormat("(document, %@, undefined);", script)
         webView.eval(javaScript: scriptSource) { (result, error) in
             guard result != nil, error == nil else {
                 completion(false, error)
