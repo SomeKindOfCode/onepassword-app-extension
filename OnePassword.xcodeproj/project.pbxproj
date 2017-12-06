@@ -15,12 +15,16 @@
 		9256FFA71FC8BC0A0007CC05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9256FFA51FC8BC0A0007CC05 /* Main.storyboard */; };
 		9256FFA91FC8BC0B0007CC05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9256FFA81FC8BC0B0007CC05 /* Assets.xcassets */; };
 		9256FFAC1FC8BC0B0007CC05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9256FFAA1FC8BC0B0007CC05 /* LaunchScreen.storyboard */; };
-		9256FFB51FC8D4680007CC05 /* 1Password.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9256FF941FC8561A0007CC05 /* 1Password.xcassets */; };
 		9256FFB71FC8D6DA0007CC05 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9256FFB61FC8D6DA0007CC05 /* Constants.swift */; };
 		9256FFB91FC8E4740007CC05 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9256FFB81FC8E4740007CC05 /* Error.swift */; };
 		9256FFBB1FCC4AA70007CC05 /* OnePassword.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9256FF841FC8559C0007CC05 /* OnePassword.framework */; };
 		9256FFBC1FCC4AA70007CC05 /* OnePassword.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9256FF841FC8559C0007CC05 /* OnePassword.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9256FFBF1FCC6A280007CC05 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9256FFBE1FCC6A280007CC05 /* Extensions.swift */; };
+		92791DCA1FD7E4B20053D442 /* OnePasswordUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 92791DC81FD7E4B20053D442 /* OnePasswordUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92791DCD1FD7E4B20053D442 /* OnePasswordUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92791DC61FD7E4B20053D442 /* OnePasswordUI.framework */; };
+		92791DCE1FD7E4B20053D442 /* OnePasswordUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92791DC61FD7E4B20053D442 /* OnePasswordUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		92791DD21FD7E4C90053D442 /* 1Password.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9256FF941FC8561A0007CC05 /* 1Password.xcassets */; };
+		92791DD41FD7E54F0053D442 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92791DD31FD7E54F0053D442 /* Buttons.swift */; };
 		92D0D0581FD58CE2007F63D5 /* Scripts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D0D0571FD58CE2007F63D5 /* Scripts.swift */; };
 		92D0D05C1FD5A766007F63D5 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D0D05B1FD5A766007F63D5 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
@@ -33,6 +37,13 @@
 			remoteGlobalIDString = 9256FF831FC8559C0007CC05;
 			remoteInfo = OnePassword;
 		};
+		92791DCB1FD7E4B20053D442 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9256FF7B1FC8559C0007CC05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92791DC51FD7E4B20053D442;
+			remoteInfo = OnePasswordUI;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +53,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				92791DCE1FD7E4B20053D442 /* OnePasswordUI.framework in Embed Frameworks */,
 				9256FFBC1FCC4AA70007CC05 /* OnePassword.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -69,6 +81,10 @@
 		9256FFB81FC8E4740007CC05 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		9256FFBE1FCC6A280007CC05 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9257D85D1FD6CD1000D3AE6D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		92791DC61FD7E4B20053D442 /* OnePasswordUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OnePasswordUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92791DC81FD7E4B20053D442 /* OnePasswordUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnePasswordUI.h; sourceTree = "<group>"; };
+		92791DC91FD7E4B20053D442 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92791DD31FD7E54F0053D442 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		92D0D0571FD58CE2007F63D5 /* Scripts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scripts.swift; sourceTree = "<group>"; };
 		92D0D05B1FD5A766007F63D5 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,7 +101,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92791DCD1FD7E4B20053D442 /* OnePasswordUI.framework in Frameworks */,
 				9256FFBB1FCC4AA70007CC05 /* OnePassword.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92791DC21FD7E4B20053D442 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +121,7 @@
 			children = (
 				9257D85D1FD6CD1000D3AE6D /* README.md */,
 				9256FF861FC8559C0007CC05 /* OnePassword */,
+				92791DC71FD7E4B20053D442 /* OnePasswordUI */,
 				9256FFA01FC8BC0A0007CC05 /* App Example Swift */,
 				9256FF851FC8559C0007CC05 /* Products */,
 				9256FFB11FC8C4060007CC05 /* Frameworks */,
@@ -108,6 +133,7 @@
 			children = (
 				9256FF841FC8559C0007CC05 /* OnePassword.framework */,
 				9256FF9F1FC8BC0A0007CC05 /* App Example Swift.app */,
+				92791DC61FD7E4B20053D442 /* OnePasswordUI.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,7 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				9256FF981FC874680007CC05 /* Utilities */,
-				9256FF941FC8561A0007CC05 /* 1Password.xcassets */,
 				9256FF8F1FC855CF0007CC05 /* ObjC */,
 				9256FF871FC8559C0007CC05 /* OnePassword.h */,
 				9256FF881FC8559C0007CC05 /* Info.plist */,
@@ -167,6 +192,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		92791DC71FD7E4B20053D442 /* OnePasswordUI */ = {
+			isa = PBXGroup;
+			children = (
+				9256FF941FC8561A0007CC05 /* 1Password.xcassets */,
+				92791DC81FD7E4B20053D442 /* OnePasswordUI.h */,
+				92791DC91FD7E4B20053D442 /* Info.plist */,
+				92791DD31FD7E54F0053D442 /* Buttons.swift */,
+			);
+			path = OnePasswordUI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -175,6 +211,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9256FF891FC8559C0007CC05 /* OnePassword.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92791DC31FD7E4B20053D442 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92791DCA1FD7E4B20053D442 /* OnePasswordUI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,11 +256,30 @@
 			);
 			dependencies = (
 				9256FFB41FC8C4090007CC05 /* PBXTargetDependency */,
+				92791DCC1FD7E4B20053D442 /* PBXTargetDependency */,
 			);
 			name = "App Example Swift";
 			productName = "App Example Swift";
 			productReference = 9256FF9F1FC8BC0A0007CC05 /* App Example Swift.app */;
 			productType = "com.apple.product-type.application";
+		};
+		92791DC51FD7E4B20053D442 /* OnePasswordUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92791DD11FD7E4B20053D442 /* Build configuration list for PBXNativeTarget "OnePasswordUI" */;
+			buildPhases = (
+				92791DC11FD7E4B20053D442 /* Sources */,
+				92791DC21FD7E4B20053D442 /* Frameworks */,
+				92791DC31FD7E4B20053D442 /* Headers */,
+				92791DC41FD7E4B20053D442 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OnePasswordUI;
+			productName = OnePasswordUI;
+			productReference = 92791DC61FD7E4B20053D442 /* OnePasswordUI.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -237,6 +300,11 @@
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
+					92791DC51FD7E4B20053D442 = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 9256FF7E1FC8559C0007CC05 /* Build configuration list for PBXProject "OnePassword" */;
@@ -253,6 +321,7 @@
 			projectRoot = "";
 			targets = (
 				9256FF831FC8559C0007CC05 /* OnePassword */,
+				92791DC51FD7E4B20053D442 /* OnePasswordUI */,
 				9256FF9E1FC8BC0A0007CC05 /* App Example Swift */,
 			);
 		};
@@ -263,7 +332,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9256FFB51FC8D4680007CC05 /* 1Password.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +342,14 @@
 				9256FFAC1FC8BC0B0007CC05 /* LaunchScreen.storyboard in Resources */,
 				9256FFA91FC8BC0B0007CC05 /* Assets.xcassets in Resources */,
 				9256FFA71FC8BC0A0007CC05 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92791DC41FD7E4B20053D442 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92791DD21FD7E4C90053D442 /* 1Password.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +379,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		92791DC11FD7E4B20053D442 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92791DD41FD7E54F0053D442 /* Buttons.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -310,6 +394,11 @@
 			isa = PBXTargetDependency;
 			target = 9256FF831FC8559C0007CC05 /* OnePassword */;
 			targetProxy = 9256FFB31FC8C4090007CC05 /* PBXContainerItemProxy */;
+		};
+		92791DCC1FD7E4B20053D442 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92791DC51FD7E4B20053D442 /* OnePasswordUI */;
+			targetProxy = 92791DCB1FD7E4B20053D442 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -527,6 +616,53 @@
 			};
 			name = Release;
 		};
+		92791DCF1FD7E4B20053D442 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = CXT48Q4DDA;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = OnePasswordUI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.somekindofcode.OnePasswordUI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		92791DD01FD7E4B20053D442 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = CXT48Q4DDA;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = OnePasswordUI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.somekindofcode.OnePasswordUI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -553,6 +689,15 @@
 			buildConfigurations = (
 				9256FFAF1FC8BC0B0007CC05 /* Debug */,
 				9256FFB01FC8BC0B0007CC05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92791DD11FD7E4B20053D442 /* Build configuration list for PBXNativeTarget "OnePasswordUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92791DCF1FD7E4B20053D442 /* Debug */,
+				92791DD01FD7E4B20053D442 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

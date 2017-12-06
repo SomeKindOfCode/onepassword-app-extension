@@ -37,13 +37,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ls5-tK-fO8">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ls5-tK-fO8" customClass="OnePasswordButton" customModule="OnePasswordUI">
                                 <rect key="frame" x="321" y="120" width="35" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Ls5-tK-fO8" secondAttribute="height" multiplier="1:1" id="67L-OH-eBS"/>
                                     <constraint firstAttribute="width" constant="35" id="ROm-gI-cqj"/>
                                 </constraints>
-                                <state key="normal" image="onepassword-button"/>
                                 <connections>
                                     <action selector="onePassButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iRT-Qn-y3v"/>
                                 </connections>
@@ -130,7 +129,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZbD-T4-yzG">
-                        <barButtonItem key="rightBarButtonItem" image="onepassword-navbar" id="hB3-m8-Ibu">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="hB3-m8-Ibu" customClass="OnePasswordBarButtonItem" customModule="OnePasswordUI">
                             <connections>
                                 <action selector="on1PassButtonTap:" destination="ewY-61-Kz1" id="8iq-q2-pim"/>
                             </connections>
@@ -185,8 +184,4 @@
             <point key="canvasLocation" x="523.20000000000005" y="547.82608695652175"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="onepassword-button" width="27" height="27"/>
-        <image name="onepassword-navbar" width="23" height="23"/>
-    </resources>
 </document>
