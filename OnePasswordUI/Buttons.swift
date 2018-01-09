@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class OnePasswordBarButtonItem: UIBarButtonItem {
+public class OnePasswordBarButtonItem: UIBarButtonItem {
     #if !TARGET_INTERFACE_BUILDER
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -37,7 +37,7 @@ class OnePasswordBarButtonItem: UIBarButtonItem {
 }
 
 @IBDesignable
-class OnePasswordButton: UIButton {
+public class OnePasswordButton: UIButton {
     #if !TARGET_INTERFACE_BUILDER
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
