@@ -9,16 +9,16 @@
 import UIKit
 
 @IBDesignable
-class OnePasswordBarButtonItem: UIBarButtonItem {
+public class OnePasswordBarButtonItem: UIBarButtonItem {
     #if !TARGET_INTERFACE_BUILDER
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         self.setup()
     }
     #endif
     
-    override init() {
+    public override init() {
         super.init()
         
         self.setup()
@@ -30,23 +30,23 @@ class OnePasswordBarButtonItem: UIBarButtonItem {
     }
     
     
-    override func prepareForInterfaceBuilder() {
+    public override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         self.setup()
     }
 }
 
 @IBDesignable
-class OnePasswordButton: UIButton {
+public class OnePasswordButton: UIButton {
     #if !TARGET_INTERFACE_BUILDER
-    required init?(coder aDecoder: NSCoder) {
+    public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         self.setup()
     }
     #endif
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         
         self.setup()
@@ -57,7 +57,7 @@ class OnePasswordButton: UIButton {
         self.setTitle(nil, for: .normal)
     }
     
-    override func prepareForInterfaceBuilder() {
+    public override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         self.setup()
     }
