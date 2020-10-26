@@ -6,7 +6,7 @@
 //  Copyright © 2017 Some Kind of Code. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import MobileCoreServices
 
 public typealias OnePasswordLoginDictionaryCompletionBlock = (_ loginDictionary: [String:String]?, _ error: Error?) -> ()
@@ -171,7 +171,7 @@ extension OnePasswordExtention {
         }
         
         guard 
-            let itemProvider = attachments.first as? NSItemProvider,
+            let itemProvider = attachments.first,
             itemProvider.hasItemConformingToTypeIdentifier(kUTTypePropertyList as String)
         else {
             completion(nil, OnePasswordError.unexpectedData("extension item attachment does not conform to kUTTypePropertyList type identifier"))
@@ -212,7 +212,7 @@ extension OnePasswordExtention {
 }
 
 func debugLog(_ message: String, function: String = #function) {
-    #if (arch(i386) || arch(x86_64)) && os(iOS)
+    #if targetEnvironment(simulator)
     Swift.print("[OnePassword \(function)] ⚠️ \(message)")
     #endif
 }
